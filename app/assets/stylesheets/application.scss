@@ -1,1 +1,15 @@
+// import config
 @import "bootstrap/scss/bootstrap";
+
+// import graphical variables
+@import "colors";
+@import "fonts";
+
+// import partials
+@import "articles";
+@import "reviews";
+
+// global style
+body {
+  background: $oatmeal;
+}
