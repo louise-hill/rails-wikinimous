@@ -7,14 +7,14 @@ class ArticlesController < ApplicationController
     article = Article.new
   end
 
-  def create
+  def show
+    @article = Article.find(params[:id])
+  end
 
+  def create
   end
 
   def edit
-  end
-
-  def show
   end
 
   def update
