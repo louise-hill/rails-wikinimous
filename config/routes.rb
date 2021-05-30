@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   root to: 'articles#index'
-  resources :articles
+
+  # add a loop to apply to all the articles and select
+
+  resources :articles do
+    collection do
+      get :top
+    end
+  end
 
   # # R
   # # all articles

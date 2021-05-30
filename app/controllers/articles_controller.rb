@@ -1,6 +1,10 @@
 class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
 
+  def top
+    @articles = Article.where(title: 'Bookhouse')
+  end
+
   def index
     @articles = Article.all
   end
