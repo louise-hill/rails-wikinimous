@@ -1,8 +1,12 @@
 class ArticlesController < ApplicationController
-  before_action :find_article, only: [:show, :edit, :update, :destroy]
+  before_action :find_article, only: [:show, :edit, :update, :destroy, :name]
 
   def top
     @articles = Article.where(title: 'Bookhouse')
+  end
+
+  def name
+    @author = @article.name
   end
 
   def index

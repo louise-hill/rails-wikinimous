@@ -1,0 +1,8 @@
+<h1>Review for <%=@article.title %> </h1>
+
+<%= simple_form_for [@article, @review] do | f | %>
+  <%= f.input :content %>
+  <%= f.submit "Submit review", class: 'btn btn-primary' %>
+<% end %>
+
+<%= link_to "Back", article_path(@article) %>

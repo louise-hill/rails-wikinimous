@@ -7,7 +7,15 @@ Rails.application.routes.draw do
     collection do
       get :top
     end
+
+    member do
+      get :name
+    end
+
+    resources :reviews, only: [:new, :create]
   end
+  resources :reviews, only: [:destroy]
+end
 
   # # R
   # # all articles
@@ -31,4 +39,3 @@ Rails.application.routes.draw do
   # # D
   # delete 'articles/:id', to: 'articles#destroy'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-end
